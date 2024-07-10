@@ -2,7 +2,7 @@
   --font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   --text-color: white;
   --border-settings: solid white 2px;
-  --text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.336);
+  --text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
 html,
@@ -19,7 +19,87 @@ body {
   font-family: var(--font);
 }
 
-.welcome-block {
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 200vh;
+  width: 100%;
+  border: solid 4px black;
+}
+
+.main-container__welcome-block {
+  border: solid 2px black;
+  flex: 1;
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+.welcome-block__header {
+  display: flex;
+  flex-grow: 1;
+  border: solid 2px green;
+  max-height: 2em;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 0;
+}
+
+.welcome-block__container {
+  border: solid 2px pink;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 100%;
+}
+
+.welcome-block__info {
+  border: solid 2px yellow;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.welcome-block__slogan {
+  border: solid 2px blue;
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-block__text {
+  width: 70%;
+  font-size: 3rem;
+}
+
+.welcome-block__buttons-block {
+  border: solid 2px red;
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-block__button {
+  padding: 1.5em;
+  width: 20em;
+  font-style: none;
+  background: transparent;
+  font-size: 1.2rem;
+}
+
+.main-container__text-block {
+  border: solid 2px black;
+  flex: 1;
+}
+
+/* .welcome-block {
   margin: 0;
   padding: 0;
   background-image: url(./background-image.png);
@@ -47,7 +127,7 @@ body {
 .welcome-block__text {
   color: var(--text-color);
   font-size: 2rem;
-  padding-top: 5em;
+  padding-top: 8em;
   padding-bottom: 9.3em;
   padding-right: 5em;
   margin-top: -2em;
@@ -56,6 +136,42 @@ body {
   text-shadow: var(--text-shadow);
   border-right: var(--border-settings);
   border-bottom: var(--border-settings);
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.main-block {
+  background: linear-gradient(180deg, rgb(213, 235, 236), rgb(128, 172, 166));
+  padding: 0;
+  margin: 0;
+}
+
+.main-block__about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 5rem;
+  text-shadow: var(--text-shadow);
+  padding-top: 0.5em;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.main-block__text {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  text-shadow: var(--text-shadow);
+  padding-top: 1em;
+  padding-left: 3em;
+  padding-right: 40em;
 }
 
 @media screen and (max-width: 480px) {
@@ -72,4 +188,4 @@ body {
     border-right: none;
     border-bottom: none;
   }
-}
+} */
