@@ -3,6 +3,7 @@
   --text-color: white;
   --border-settings: solid white 2px;
   --text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  --border-settings: solid 2px white;
 }
 
 html,
@@ -13,6 +14,8 @@ body {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  color: var(--text-color);
+  text-shadow: var(--text-shadow);
 }
 
 body {
@@ -24,22 +27,33 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  height: 200vh;
+  max-height: 1000%;
   width: 100%;
-  border: solid 4px black;
+  background-color: rgb(66, 68, 71);
+}
+
+.main-container__background-container {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  row-gap: 2em;
 }
 
 .main-container__welcome-block {
-  border: solid 2px black;
+  border: var(--border-settings);
+  border-radius: 2em;
   flex: 1;
   min-height: 100vh;
   min-width: 100%;
+  background-image: url(./background-image.png);
+  background-repeat: no-repeat;
 }
 
 .welcome-block__header {
   display: flex;
   flex-grow: 1;
-  border: solid 2px green;
+  border-bottom: var(--border-settings);
   max-height: 2em;
   justify-content: center;
   align-items: center;
@@ -48,22 +62,20 @@ body {
 }
 
 .welcome-block__container {
-  border: solid 2px pink;
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 .welcome-block__info {
-  border: solid 2px yellow;
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
+  min-height: 60em;
 }
 
 .welcome-block__slogan {
-  border: solid 2px blue;
+  border-right: var(--border-settings);
   min-width: 50%;
   display: flex;
   flex-direction: column;
@@ -77,7 +89,6 @@ body {
 }
 
 .welcome-block__buttons-block {
-  border: solid 2px red;
   min-width: 50%;
   display: flex;
   flex-direction: column;
@@ -87,105 +98,45 @@ body {
 }
 
 .welcome-block__button {
-  padding: 1.5em;
+  padding: 1em;
   width: 20em;
   font-style: none;
   background: transparent;
   font-size: 1.2rem;
+  color: white;
+  border: var(--border-settings);
 }
 
-.main-container__text-block {
-  border: solid 2px black;
-  flex: 1;
+.main-container__buffer-zone {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2em;
 }
 
-/* .welcome-block {
-  margin: 0;
-  padding: 0;
-  background-image: url(./background-image.png);
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100vh;
+.text-block__image-container {
+}
+
+.text-block__desc-text {
+  max-width: 63em;
+  font-size: 1.3rem;
+}
+
+.slide-images {
+  max-width: 1300px;
+  max-height: 1000px;
+  border: solid 4px white;
+  border-radius: 2em;
   z-index: -1;
 }
 
-.welcome-block__header {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 0.34em;
-  color: var(--text-color);
-  background-image: url(./background-image.png);
-  background-repeat: no-repeat;
-  position: sticky;
-  top: 0;
-  border-bottom: var(--border-settings);
-  font-size: 4rem;
-  text-shadow: var(--text-shadow);
-}
-
-.welcome-block__text {
-  color: var(--text-color);
-  font-size: 2rem;
-  padding-top: 8em;
-  padding-bottom: 9.3em;
-  padding-right: 5em;
-  margin-top: -2em;
-  margin-right: 29.7em;
-  padding-left: 5em;
-  text-shadow: var(--text-shadow);
-  border-right: var(--border-settings);
-  border-bottom: var(--border-settings);
-}
-
-.button {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-}
-
-.main-block {
-  background: linear-gradient(180deg, rgb(213, 235, 236), rgb(128, 172, 166));
-  padding: 0;
-  margin: 0;
-}
-
-.main-block__about-us {
+.main-container__text-block {
+  border: var(--border-settings);
+  border-radius: 2em;
+  background-color: #2c2f33;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--text-color);
-  font-size: 5rem;
-  text-shadow: var(--text-shadow);
-  padding-top: 0.5em;
-  margin: 0;
 }
-
-p {
-  margin: 0;
-}
-
-.main-block__text {
-  font-size: 1.8rem;
-  color: var(--text-color);
-  text-shadow: var(--text-shadow);
-  padding-top: 1em;
-  padding-left: 3em;
-  padding-right: 40em;
-}
-
-@media screen and (max-width: 480px) {
-  .welcome-block__text {
-    color: var(--text-color);
-    font-size: 2rem;
-    padding-top: 1em;
-    padding-bottom: 0em;
-    padding-right: 1em;
-    margin-top: 0em;
-    margin-right: 0em;
-    padding-left: 1em;
-    text-shadow: var(--text-shadow);
-    border-right: none;
-    border-bottom: none;
-  }
-} */
